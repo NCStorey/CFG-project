@@ -32,4 +32,16 @@ h1{
     
 }
 
+#window_div{
+    width: 100%;
+    position: absolute;
+}
+
+#window_img{
+    width:30%;
+    position: absolute;
+    left:35%;
+    z-index: 1;
+}
+
 
