@@ -1,3 +1,35 @@
+#greeting_para{
+    visibility: hidden;
+    margin-top: 10rem;
+}
+
 p {
-    font-Size: 1rem;
-  }
+    font-Size: 1.7rem;
+}
+
+h1{
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+#start_button{
+    height: 5rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    border-radius: 15px;
+}
+
+#button_div_one{
+    visibility: hidden;
+}
+
+#button_div_one button {
+    height: 5rem;
+    width: 10rem;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    
+}
+
+

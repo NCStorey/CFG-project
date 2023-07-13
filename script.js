@@ -1,21 +1,32 @@
 let scenarios = ["Raining", "Sunny", "Snowing", "Bedtime"];
-
+let user_name = "";
 let items = [];
 
 const name_input_here = document.getElementById("name_input_here");
 const yes_get_ready = document.getElementById("yes_get_ready");
 const no_get_ready = document.getElementById("no_get_ready");
 const response_one_div = document.getElementById("response_one_div");
+const start_button = document.getElementById("start_button");
+const greeting_para = document.getElementById("greeting_para")
 
-let user_name = prompt("Please enter your name :) if you're not sure then leave it blank and I will call you, hmmmmmm . . . . Friend!")
+start_button.addEventListener("click", function(){
 
-if (user_name === ""){
-    user_name = "friend"
-}
+    start_button.style.display = "none";
+    greeting_para.style.visibility = "visible"
 
-name_input_here.innerText = user_name
+    user_name = prompt("Please enter your name :) if you're not sure then leave it blank and I will call you, hmmmmmm . . . . Friend!");
+    
+    if (user_name === ""){
+        user_name = "friend"
+    };
 
-console.log(user_name)
+    name_input_here.innerText = user_name
+
+    button_div_one.style.visibility = "visible"
+
+    
+})
+
 
 no_get_ready.addEventListener("click", function(){
 
@@ -23,6 +34,8 @@ no_get_ready.addEventListener("click", function(){
     no_para.innerText = "Awh! Ok nevermind. Maybe next time?";
     response_one_div.appendChild(no_para);
     button_div_one.style.display = "none"
+
+    
 })
 
 
