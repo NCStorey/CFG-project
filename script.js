@@ -1,7 +1,3 @@
-let scenarios = ["Raining", "Sunny", "Snowing", "Bedtime"];
-let user_name = "";
-let items = [];
-
 const name_input_here = document.getElementById("name_input_here");
 const yes_get_ready = document.getElementById("yes_get_ready");
 const no_get_ready = document.getElementById("no_get_ready");
@@ -9,6 +5,30 @@ const response_one_div = document.getElementById("response_one_div");
 const start_button = document.getElementById("start_button");
 const greeting_para = document.getElementById("greeting_para");
 const window_div = document.getElementById("window_div");
+
+let scenarios = [
+    {
+    "condition" : "Raining",
+    "src" : "../images/man-3581659_1280.jpg",
+    "alt" : "raining",
+    }, 
+    {
+    "condition" : "Sunny",
+    "src" : "../images/background-2184_1280.jpg",
+    "alt" : "sunny field",
+    },
+    {
+    "condition" : "Bedtime",
+    "src" : "../images/images/british-columbia-2382640_1280.jpg",
+    "alt" : "stars across a dark sky",
+    }
+
+];
+
+
+let items = [];
+
+let user_name = "";
 
 // start button event listener
 start_button.addEventListener("click", function(){
@@ -57,7 +77,7 @@ yes_get_ready.addEventListener("click", function(){
     button_div_one.style.display = "none";
 
     const window_img = document.createElement("img");
-    window_img.src = "./window-frame-2075509_1280.png";
+    window_img.src = "../images/window-frame-2075509_1280.png";
     window_img.alt = "image of and empty window";
     window_img.id = "window_img"
     window_div.append(window_img);
@@ -69,9 +89,21 @@ const window_img = document.getElementById("window_img")
 
 window_div.addEventListener("click", function(){
 
+    // hiding the yes paragraph as no longer needed
     document.getElementById("yes_para").style.display = "none"
-    console.log(window_img)
     
+    // generates a random number to create a random scenario
+    let scenario_num = Math.floor(Math.random() * (scenarios.length-1));
+    let current_scenario = scenarios[scenario_num];
+
+    console.log(current_scenario)
+
+    const condition_img = document.createElement("img");
+    condition_img.src = current_scenario.src
+    condition_img.alt = current_scenario.alt;
+    condition_img.id = ("condition_img")
+    window_div.append(condition_img);
+
 })
 
 
