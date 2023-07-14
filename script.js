@@ -11,16 +11,19 @@ let scenarios = [
     "condition" : "Raining",
     "src" : "../images/man-3581659_1280.jpg",
     "alt" : "raining",
+    "reaction" : "Wow! it looks really wet and rainy out there. I can't wait to go and splash in some puddles! what should we wear?"
     }, 
     {
     "condition" : "Sunny",
     "src" : "../images/background-2184_1280.jpg",
     "alt" : "sunny field",
+    "reaction" : "it is so warm and sunny outside, I can't wait to go and explore! what should we wear?"
     },
     {
     "condition" : "Bedtime",
-    "src" : "../images/images/british-columbia-2382640_1280.jpg",
+    "src" : "../images/british-columbia-2382640_1280.jpg",
     "alt" : "stars across a dark sky",
+    "reaction" : "it is so dark outside, it must be bedtime. hmm now what will I need to wear?"
     }
 
 ];
@@ -93,7 +96,7 @@ window_div.addEventListener("click", function(){
     document.getElementById("yes_para").style.display = "none"
     
     // generates a random number to create a random scenario
-    let scenario_num = Math.floor(Math.random() * (scenarios.length-1));
+    let scenario_num = Math.floor(Math.random() * (scenarios.length));
     let current_scenario = scenarios[scenario_num];
 
     console.log(current_scenario)
@@ -104,7 +107,7 @@ window_div.addEventListener("click", function(){
     condition_img.id = ("condition_img")
     window_div.append(condition_img);
 
-})
+}, {once : true})
 
 
 
