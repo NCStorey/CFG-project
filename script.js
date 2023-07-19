@@ -1,35 +1,21 @@
-const name_input_here = document.getElementById("name_input_here");
-const response_div_one = document.getElementById("response_div_one");
-const start_button = document.getElementById("start_button");
-const greeting_para = document.getElementById("greeting_para");
-const window_div = document.getElementById("window_div");
+let user_name = "";
 
-let scenarios = [
-    {
-    "condition" : "Raining",
-    "src" : "../images/man-3581659_1280.jpg",
-    "alt" : "raining",
-    "reaction" : "Wow! it looks really wet and rainy out there. I can't wait to go and splash in some puddles! what should we wear?"
-    }, 
-    {
-    "condition" : "Sunny",
-    "src" : "../images/background-2184_1280.jpg",
-    "alt" : "sunny field",
-    "reaction" : "it is so warm and sunny outside, I can't wait to go and explore! what should we wear?"
-    },
-    {
-    "condition" : "Bedtime",
-    "src" : "../images/british-columbia-2382640_1280.jpg",
-    "alt" : "stars across a dark sky",
-    "reaction" : "it is so dark outside, it must be bedtime. hmm now what will I need to wear?"
+function createItemDivs(itemType, appendTo){
+
+    for (i = 1; i < 5; i++){
+
+        let item_div  = document.createElement("div");
+        item_div.setAttribute("id", itemType + i);
+        appendTo.appendChild(item_div);
+
+        let para = document.createElement("p");
+        para.innerText = "item";
+        item_div.appendChild(para)
+
+
     }
 
-];
-
-
-let items = [];
-
-let user_name = "";
+}
 
 // start button event listener
 start_button.addEventListener("click", function(){
@@ -62,25 +48,24 @@ start_button.addEventListener("click", function(){
     no_get_ready.addEventListener("click", function(){
 
     greeting_para.style.display = "none";
-    no_para = document.createElement("p");
-    no_para.innerText = "Awh! Ok nevermind. Maybe next time?";
-    response_div_one.appendChild(no_para);
+
+    response_para_one.innerText = "Awh! Ok nevermind. Maybe next time?";
     button_div_one.style.display = "none";    
 })
 
+    // adds event listener to yes button.
     yes_get_ready.addEventListener("click", function(){
 
     greeting_para.style.display = "none";
-
-    yes_para = document.createElement("p");
-    yes_para.innerText = "Yay, thank you! Lets take a look outside. Can you click on the window please?";
-    response_div_one.appendChild(yes_para);
+    
+    response_para_one.innerText = "Yay, thank you! Lets take a look outside. Can you click on the window please?";
     button_div_one.style.display = "none";
 
+    // creates the empty window image
     window_img = document.createElement("img");
     window_img.src = "../images/window-frame-2075509_1280.png";
     window_img.alt = "image of and empty window";
-    window_img.id = "window_img"
+    window_img.id = "window_img";
     window_div.append(window_img);
 })
 
@@ -89,9 +74,6 @@ start_button.addEventListener("click", function(){
 
 window_div.addEventListener("click", function(){
 
-    // hiding the yes paragraph as no longer needed
-    
-    
     // generates a random number to create a random scenario
     let scenario_num = Math.floor(Math.random() * (scenarios.length));
     let current_scenario = scenarios[scenario_num];
@@ -104,12 +86,13 @@ window_div.addEventListener("click", function(){
     condition_img.id = ("condition_img")
     window_div.append(condition_img);
 
-    if (response_div_one.hasChildNodes()){
-        response_div_one.removeChild(response_div_one.childNodes[0])
-    }
+    response_para_one.innerText = ""
+    
+    response_para_two.innerText = current_scenario.reaction
+
+    createItemDivs("headitem", head_items);
+    createItemDivs("bodyitem", body_items);
+    createItemDivs("holditem", hold_items);
+    createItemDivs("footitem", foot_items);
 
 }, {once : true});
-
-
-
-

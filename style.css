@@ -28,11 +28,6 @@ h1{
     
 }
 
-#window_div{
-    width: 100%;
-    position: absolute;
-}
-
 #window_img{
     width:30%;
     position: absolute;
@@ -41,5 +36,35 @@ h1{
 }
 
 #condition_img{
-    width:30%;
+    width:100%;
+}
+
+.flex_cont{
+    display: flex;
+}
+
+.border{
+    border: 3px solid black;
+}
+
+#items_div{
+    height: 10rem;
+    width: 35%;
+}
+
+#window_div{
+    height: 10rem;
+    width: 30%;
+}
+
+#choosen_div{
+    height: 10rem;
+    width: 35%;
+}
+
+.item_flex_cont{
+    display: flex;
+    justify-content: space-evenly;
+    height: 8rem;
+    align-items: center;
 }

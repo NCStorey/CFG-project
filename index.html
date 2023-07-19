@@ -14,17 +14,26 @@
     <div>
         <p id="greeting_para">Hi <span id = "name_input_here"></span> can you help me get ready?</p>
         
-        <div id= "response_div_one"></div>
+        <p id= "response_para_one"></p>
 
         <div id = "button_div_one"></div>
     </div>
 
-    <div>
-        <div id = "item_div"></div>
-        <div id = "window_div"></div>
-        <div id = "choosen_div"></div>
+    <div class = "flex_cont">
+        <div class = "border" id = "items_div">
+            <p id = "response_para_two"></p>
+            <div id = "clothing_div">
+                <div id = "head_items" class = "item_flex_cont border"></div>
+                <div id = "body_items" class = "item_flex_cont border"></div>
+                <div id = "hold_items" class = "item_flex_cont border"></div>
+                <div id = "foot_items" class = "item_flex_cont border"></div>
+            </div>
+        </div>
+        <div class = "border" id = "window_div"></div>
+        <div class = "border" id = "choosen_div"></div>
     </div>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
