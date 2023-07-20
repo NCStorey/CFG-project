@@ -1,20 +1,23 @@
 let user_name = "";
 
-function createItemDivs(itemType, appendTo){
+function createItemDivs(itemType, appendTo,itemList){
 
     for (i = 1; i < 5; i++){
 
         let item_div  = document.createElement("div");
         item_div.setAttribute("id", itemType + i);
+        item_div.setAttribute("class", "itemContainer")
         appendTo.appendChild(item_div);
 
+        let img = document.createElement("img");
+        img.setAttribute("src", itemList[i-1].src);
+        img.setAttribute("class", "itemImg");
+        item_div.appendChild(img)
+
         let para = document.createElement("p");
-        para.innerText = "item";
-        item_div.appendChild(para)
-
-
+        para.innerText = itemList[i-1].item;
+        item_div.appendChild(para);
     }
-
 }
 
 // start button event listener
@@ -90,9 +93,9 @@ window_div.addEventListener("click", function(){
     
     response_para_two.innerText = current_scenario.reaction
 
-    createItemDivs("headitem", head_items);
-    createItemDivs("bodyitem", body_items);
-    createItemDivs("holditem", hold_items);
-    createItemDivs("footitem", foot_items);
+    createItemDivs("headitem", head_items, head_item_list);
+    createItemDivs("bodyitem", body_items, body_item_list);
+    createItemDivs("holditem", hold_items, hold_item_list);
+    createItemDivs("footitem", foot_items, foot_item_list);
 
 }, {once : true});

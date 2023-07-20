@@ -15,41 +15,116 @@ let scenarios = [
     "src" : "../images/man-3581659_1280.jpg",
     "alt" : "raining",
     "reaction" : "Wow! it looks really wet and rainy out there. I can't wait to go and splash in some puddles! what will I need?",
-    "head_item" : {"item" : "Rain Hat", "src" : "../images/rainhat.png"},
-    "body_item" : {"item" : "Rain Coat", "src" : "../images/raincoat.png"},
-    "hold_item" : {"item" : "Umbrella", "src" : "../images/umbrella.png"},
-    "foot_item" : {"item" : "Wellington Boots", "src" : "../images/wellington.png"},
     }, 
     {
     "condition" : "Sunny",
     "src" : "../images/background-2184_1280.jpg",
     "alt" : "sunny field",
     "reaction" : "it is so warm and sunny outside, I can't wait to go and explore! what will I need?",
-    "head_item" : {"item" : "Sun Hat", "src" : "../images/rainhat.png"},
-    "body_item" : {"item" : "T-shirt", "src" : "../images/raincoat.png"},
-    "hold_item" : {"item" : "Sun Cream", "src" : "../images/umbrella.png"},
-    "foot_item" : {"item" : "Sandals", "src" : "../images/wellington.png"},
     },
     {
     "condition" : "Bedtime",
     "src" : "../images/british-columbia-2382640_1280.jpg",
     "alt" : "stars across a dark sky",
     "reaction" : "it is so dark outside, it must be bedtime. hmm now what will I need?",
-    "head_item" : {"item" : "Night Cap", "src" : "../images/rainhat.png"},
-    "body_item" : {"item" : "Pajamas", "src" : "../images/raincoat.png"},
-    "hold_item" : {"item" : "Teddy", "src" : "../images/umbrella.png"},
-    "foot_item" : {"item" : "Slippers", "src" : "../images/wellington.png"},
     },
     {
     "condition" : "Snowing",
     "src" : "../images/winter-landscape-2571788_1280.jpg",
     "alt" : "a winters day",
     "reaction" : "Brrrrr it looks cold outside! I love making snow angels and sledging down hills. What will I need?",
-    "head_item" : {"item" : "Bobble hat", "src" : "../images/rainhat.png"},
-    "body_item" : {"item" : "Warm Coat", "src" : "../images/raincoat.png"},
-    "hold_item" : {"item" : "Gloves", "src" : "../images/umbrella.png"},
-    "foot_item" : {"item" : "Boots", "src" : "../images/wellington.png"},
         }
 
 ];
 
+let head_item_list = [
+    {
+    "item" : "Rain Hat", 
+    "condition" : "Raining",
+    "src" : "../images/rainhat.png",
+    },
+    {
+    "item" : "Sun Hat", 
+    "condition" : "Sunny",
+    "src" : "../images/sunhat.png",
+    },
+    {
+    "item" : "Sleep Cap", 
+    "condition" : "Bedtime",
+    "src" : "../images/rainhat.png",
+    },
+    {
+    "item" : "Bobble hat",
+    "condition" : "Snowing",
+    "src" : "../images/bobblehat.png",
+    }
+]
+
+let body_item_list = [
+    {
+    "item" : "Rain Coat", 
+    "condition" : "Raining",
+    "src" : "../images/raincoat.png",
+    },
+    {
+    "item" : "T-shirt", 
+    "condition" : "Sunny",
+    "src" : "../images/tshirt.png",
+    },
+    {
+    "item" : "Pajamas", 
+    "condition" : "Bedtime",
+    "src" : "../images/raincoat.png",
+    },
+    {
+    "item" : "Warm Coat",
+    "condition" : "Snowing",
+    "src" : "../images/raincoat.png",
+    }
+]
+
+let hold_item_list = [
+    {
+    "item" : "Umbrella", 
+    "condition" : "Raining",
+    "src" : "../images/umbrella.png",
+    },
+    {
+    "item" : "Sun Cream", 
+    "condition" : "Sunny",
+    "src" : "../images/umbrella.png",
+    },
+    {
+    "item" : "Teddy", 
+    "condition" : "Bedtime",
+    "src" : "../images/umbrella.png",
+    },
+    {
+    "item" : "Gloves",
+    "condition" : "Snowing",
+    "src" : "../images/umbrella.png",
+    }
+]
+
+let foot_item_list = [
+    {
+    "item" : "Wellington Boots", 
+    "condition" : "Raining",
+    "src" : "../images/wellington.png",
+    },
+    {
+    "item" : "Sandals", 
+    "condition" : "Sunny",
+    "src" : "../images/wellington.png",
+    },
+    {
+    "item" : "Slippers", 
+    "condition" : "Bedtime",
+    "src" : "../images/wellington.png",
+    },
+    {
+    "item" : "Boots",
+    "condition" : "Snowing",
+    "src" : "../images/wellington.png",
+    }
+]
