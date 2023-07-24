@@ -16,7 +16,34 @@ function createItemDivs(itemType, appendTo,itemList){
 
         let para = document.createElement("p");
         para.innerText = itemList[i-1].item;
+        para.setAttribute("class", "imgLabel")
         item_div.appendChild(para);
+
+        item_div.addEventListener("click", function(){
+        
+            let itemType1 = document.getElementById(itemType + "1");
+            let itemType2 = document.getElementById(itemType + "2");
+            let itemType3 = document.getElementById(itemType + "3");
+            let itemType4 = document.getElementById(itemType + "4");
+        
+            if (itemType1.classList.contains("selectedImg")){
+            itemType1.classList.remove("selectedImg")
+            }
+
+            if (itemType2.classList.contains("selectedImg")){
+            itemType2.classList.remove("selectedImg")
+            }
+            
+            if (itemType3.classList.contains("selectedImg")){
+            itemType3.classList.remove("selectedImg")
+            }
+            
+            if (itemType4.classList.contains("selectedImg")){
+            itemType4.classList.remove("selectedImg")
+            }
+
+            item_div.setAttribute("class", "itemContainer selectedImg");
+        })
     }
 }
 

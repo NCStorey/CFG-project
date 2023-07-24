@@ -39,92 +39,93 @@ let scenarios = [
 
 let head_item_list = [
     {
-    "item" : "Rain Hat", 
-    "condition" : "Raining",
-    "src" : "../images/rainhat.png",
-    },
-    {
     "item" : "Sun Hat", 
     "condition" : "Sunny",
-    "src" : "../images/sunhat.png",
+    "src" : "../images/items/head/sunhats.png",
+    },
+    {
+        "item" : "Rain Hat", 
+        "condition" : "Raining",
+        "src" : "../images/items/head/rainhats.png",
     },
     {
     "item" : "Sleep Cap", 
     "condition" : "Bedtime",
-    "src" : "../images/rainhat.png",
+    "src" : "../images/items/head/nightcaps.png",
     },
     {
     "item" : "Bobble hat",
     "condition" : "Snowing",
-    "src" : "../images/bobblehat.png",
+    "src" : "../images/items/head/bobblehats.png",
     }
 ]
 
 let body_item_list = [
     {
+        "item" : "Pajamas", 
+        "condition" : "Bedtime",
+        "src" : "../images/items/body/pajamass.png",
+    },
+    {
+        "item" : "Warm Coat",
+        "condition" : "Snowing",
+        "src" : "../images/items/body/warmcoats.png",
+    },
+    {
     "item" : "Rain Coat", 
     "condition" : "Raining",
-    "src" : "../images/raincoat.png",
+    "src" : "../images/items/body/raincoats.png",
     },
     {
     "item" : "T-shirt", 
     "condition" : "Sunny",
-    "src" : "../images/tshirt.png",
+    "src" : "../images/items/body/tshirts.png",
     },
-    {
-    "item" : "Pajamas", 
-    "condition" : "Bedtime",
-    "src" : "../images/raincoat.png",
-    },
-    {
-    "item" : "Warm Coat",
-    "condition" : "Snowing",
-    "src" : "../images/raincoat.png",
-    }
 ]
 
 let hold_item_list = [
     {
-    "item" : "Umbrella", 
-    "condition" : "Raining",
-    "src" : "../images/umbrella.png",
+        "item" : "Sun Cream", 
+        "condition" : "Sunny",
+        "src" : "../images/items/hold/suncreams.png",
     },
     {
-    "item" : "Sun Cream", 
-    "condition" : "Sunny",
-    "src" : "../images/umbrella.png",
+    "item" : "Umbrella", 
+    "condition" : "Raining",
+    "src" : "../images/items/hold/umbrellas.png",
     },
     {
     "item" : "Teddy", 
     "condition" : "Bedtime",
-    "src" : "../images/umbrella.png",
+    "src" : "../images/items/hold/teddys.png",
     },
     {
     "item" : "Gloves",
     "condition" : "Snowing",
-    "src" : "../images/umbrella.png",
+    "src" : "../images/items/hold/glovess.png",
     }
 ]
 
 let foot_item_list = [
     {
+        "item" : "Boots",
+        "condition" : "Snowing",
+        "src" : "../images/items/foot/snowbootss.png",
+    },
+    {
+        "item" : "Slippers", 
+        "condition" : "Bedtime",
+        "src" : "../images/items/foot/slipperss.png",
+    },
+    {
+        "item" : "Sandals", 
+        "condition" : "Sunny",
+        "src" : "../images/items/foot/sandalss.png",
+    },
+    {
     "item" : "Wellington Boots", 
     "condition" : "Raining",
-    "src" : "../images/wellington.png",
+    "src" : "../images/items/foot/wellingtons.png",
     },
-    {
-    "item" : "Sandals", 
-    "condition" : "Sunny",
-    "src" : "../images/wellington.png",
-    },
-    {
-    "item" : "Slippers", 
-    "condition" : "Bedtime",
-    "src" : "../images/wellington.png",
-    },
-    {
-    "item" : "Boots",
-    "condition" : "Snowing",
-    "src" : "../images/wellington.png",
-    }
+
 ]

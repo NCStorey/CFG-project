@@ -29,6 +29,7 @@ h1{
 }
 
 #window_img{
+    margin-top: 4rem;
     width:30%;
     position: absolute;
     left:35%;
@@ -36,6 +37,7 @@ h1{
 }
 
 #condition_img{
+    margin-top: 4rem;
     width:100%;
 }
 
@@ -65,10 +67,26 @@ h1{
 .item_flex_cont{
     display: flex;
     justify-content: space-evenly;
-    height: 8rem;
-    align-items: center;
+}
+
+.itemContainer{
+    width: 25%;
+    height: 10rem;
+    border: solid 1px black;
 }
 
 .itemImg{
-    width: 5rem;
+    height: 70%;
+    margin-top: 0.3rem;
+}
+
+.imgLabel{
+    height: 20%;
+    margin: 0px;
+    font-size: 1.5rem;
+}
+
+.selectedImg{
+    border: solid red 2px;
+    background-color: rgba(211,211,211,0.5);
 }
