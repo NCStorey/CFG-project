@@ -25,24 +25,44 @@ function createItemDivs(itemType, appendTo,itemList){
             let itemType2 = document.getElementById(itemType + "2");
             let itemType3 = document.getElementById(itemType + "3");
             let itemType4 = document.getElementById(itemType + "4");
+
+            item_div.setAttribute("data-target", ("selected" + itemType));
         
             if (itemType1.classList.contains("selectedImg")){
             itemType1.classList.remove("selectedImg")
+            itemType1.removeAttribute("data-target", ("selected" + itemType))
             }
 
             if (itemType2.classList.contains("selectedImg")){
             itemType2.classList.remove("selectedImg")
+            itemType2.removeAttribute("data-target", ("selected" + itemType))
             }
             
             if (itemType3.classList.contains("selectedImg")){
             itemType3.classList.remove("selectedImg")
+            itemType3.removeAttribute("data-target", ("selected" + itemType))
             }
             
             if (itemType4.classList.contains("selectedImg")){
             itemType4.classList.remove("selectedImg")
+            itemType4.removeAttribute("data-target", ("selected" + itemType))
             }
 
             item_div.setAttribute("class", "itemContainer selectedImg");
+            
+            
+            let selectedHeadItem = document.querySelector('[data-target="selectedheaditem"]');
+            let selectedBodyItem = document.querySelector('[data-target="selectedbodyitem"]');
+            let selectedHoldItem = document.querySelector('[data-target="selectedholditem"]');
+            let selectedFootItem = document.querySelector('[data-target="selectedfootitem"]');
+
+            let chosenHeadItem = selectedHeadItem.cloneNode(true)
+
+            chosen_Head_Cont.appendChild(chosenHeadItem)
+
+
+            
+
         })
     }
 }

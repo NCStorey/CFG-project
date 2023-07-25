@@ -8,6 +8,10 @@ const head_items = document.getElementById("head_items");
 const body_items = document.getElementById("body_items");
 const hold_items = document.getElementById("hold_items");
 const foot_items = document.getElementById("foot_items");
+const chosen_Head_Cont = document.getElementById("chosen_Head_Cont");
+const chosen_Body_Cont = document.getElementById("chosen_Body_Cont");
+const chosen_Hold_Cont = document.getElementById("chosen_Hold_Cont");
+const chosen_Foot_Cont = document.getElementById("chosen_Foot_Cont");
 
 let scenarios = [
     {
