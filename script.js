@@ -1,4 +1,5 @@
 let user_name = "";
+let current_scenario = "";
 
 function createItemDivs(itemType, appendTo,itemList){
 
@@ -7,6 +8,7 @@ function createItemDivs(itemType, appendTo,itemList){
         let item_div  = document.createElement("div");
         item_div.setAttribute("id", itemType + i);
         item_div.setAttribute("class", "itemContainer")
+        item_div.setAttribute("data-scenario", itemList[i-1].condition)
         appendTo.appendChild(item_div);
 
         let img = document.createElement("img");
@@ -56,13 +58,41 @@ function createItemDivs(itemType, appendTo,itemList){
             let selectedHoldItem = document.querySelector('[data-target="selectedholditem"]');
             let selectedFootItem = document.querySelector('[data-target="selectedfootitem"]');
 
-            let chosenHeadItem = selectedHeadItem.cloneNode(true)
+            if (chosen_Head_Cont.hasChildNodes() === true){
+                while (chosen_Head_Cont.firstChild){
+                    chosen_Head_Cont.removeChild(chosen_Head_Cont.firstChild)
+                }
+            }
 
-            chosen_Head_Cont.appendChild(chosenHeadItem)
+            if (chosen_Body_Cont.hasChildNodes() === true){
+                while (chosen_Body_Cont.firstChild){
+                    chosen_Body_Cont.removeChild(chosen_Body_Cont.firstChild)
+                }
+            }
 
+            if (chosen_Hold_Cont.hasChildNodes() === true){
+                while (chosen_Hold_Cont.firstChild){
+                    chosen_Hold_Cont.removeChild(chosen_Hold_Cont.firstChild)
+                }
+            }
 
-            
+            if (chosen_Foot_Cont.hasChildNodes() === true){
+                while (chosen_Foot_Cont.firstChild){
+                    chosen_Foot_Cont.removeChild(chosen_Foot_Cont.firstChild)
+                }
+            }
 
+            let chosenHeadItem = selectedHeadItem.cloneNode(true);
+            let chosenBodyItem = selectedBodyItem.cloneNode(true);
+            let chosenHoldItem = selectedHoldItem.cloneNode(true);
+            let chosenFootItem = selectedFootItem.cloneNode(true);
+
+            chosen_Head_Cont.appendChild(chosenHeadItem);
+            chosen_Body_Cont.appendChild(chosenBodyItem);
+            chosen_Hold_Cont.appendChild(chosenHoldItem);
+            chosen_Foot_Cont.appendChild(chosenFootItem);
+
+            assess_Button_Cont.style.visibility = "visible"
         })
     }
 }
@@ -126,9 +156,7 @@ window_div.addEventListener("click", function(){
 
     // generates a random number to create a random scenario
     let scenario_num = Math.floor(Math.random() * (scenarios.length));
-    let current_scenario = scenarios[scenario_num];
-
-    console.log(current_scenario)
+    current_scenario = scenarios[scenario_num];
 
     const condition_img = document.createElement("img");
     condition_img.src = current_scenario.src
@@ -145,4 +173,28 @@ window_div.addEventListener("click", function(){
     createItemDivs("holditem", hold_items, hold_item_list);
     createItemDivs("footitem", foot_items, foot_item_list);
 
+    return current_scenario;
+
 }, {once : true});
+
+assess_Button.addEventListener("click", function(){
+    console.log(current_scenario.condition)
+
+    let selectedHeadItem = document.querySelector('[data-target="selectedheaditem"]');
+    let selectedBodyItem = document.querySelector('[data-target="selectedbodyitem"]');
+    let selectedHoldItem = document.querySelector('[data-target="selectedholditem"]');
+    let selectedFootItem = document.querySelector('[data-target="selectedfootitem"]');
+
+    let headScenario = selectedHeadItem.dataset.scenario;
+    let bodyScenario = selectedBodyItem.dataset.scenario;
+    let holdScenario = selectedHoldItem.dataset.scenario;
+    let footScenario = selectedFootItem.dataset.scenario;
+
+    console.log(headScenario)
+
+    if (current_scenario.condition === bodyScenario && current_scenario.condition === headScenario && current_scenario.condition === holdScenario && current_scenario.condition === footScenario ){
+        console.log("match")
+    }
+    else{console.log("no match")}
+
+})

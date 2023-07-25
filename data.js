@@ -12,6 +12,7 @@ const chosen_Head_Cont = document.getElementById("chosen_Head_Cont");
 const chosen_Body_Cont = document.getElementById("chosen_Body_Cont");
 const chosen_Hold_Cont = document.getElementById("chosen_Hold_Cont");
 const chosen_Foot_Cont = document.getElementById("chosen_Foot_Cont");
+const assess_Button_Cont = document.getElementById("assess_Button_Cont");
 
 let scenarios = [
     {
