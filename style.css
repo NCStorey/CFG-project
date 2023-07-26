@@ -21,6 +21,7 @@ h1{
 }
 
 #button_div_one button {
+    margin: 0.5rem;
     height: 5rem;
     width: 10rem;
     font-size: 1.5rem;
@@ -29,9 +30,9 @@ h1{
 }
 
 #window_img{
-    margin-top: 4rem;
-    width:30%;
     position: absolute;
+    top: 17rem;
+    width:30%;
     left:35%;
     z-index: 1;
 }
@@ -41,12 +42,12 @@ h1{
     width:100%;
 }
 
-.flex_cont{
-    display: flex;
+#clothing_div{
+    margin-right: 0.5rem;
 }
 
-.border{
-    border: 3px solid black;
+.flex_cont{
+    display: flex;
 }
 
 #items_div{
