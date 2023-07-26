@@ -37,7 +37,7 @@ function createItemDivs(itemType, appendTo,itemList){
             let itemType3 = document.getElementById(itemType + "3");
             let itemType4 = document.getElementById(itemType + "4");
 
-            
+
             item_div.setAttribute("data-target", ("selected" + itemType));
         
             if (itemType1.classList.contains("selectedImg")){
@@ -157,7 +157,7 @@ start_button.addEventListener("click", function(){
     
     // creates an img of an empty window and appends it to the div
     window_img = document.createElement("img");
-    window_img.src = "../images/window-frame-2075509_1280.png";
+    window_img.src = "./images/window-frame-2075509_1280.png";
     window_img.alt = "image of and empty window";
     window_img.id = "window_img";
     window_div.append(window_img);
